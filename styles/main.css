@@ -137,6 +137,7 @@ section ul {
     color: #000000;
     border: 1px solid #00000020;
     font-family: 'golos_regular';
+    font-size: 16px;
 }
 .main__btn_continue:disabled {
     background-color: #1C1A1A15;
