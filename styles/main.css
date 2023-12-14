@@ -144,6 +144,7 @@ section ul {
 }
 .main__btn_continue:enabled {
     background-color: #ffffff;
+    cursor: pointer;
 }
 
 /* footer */
