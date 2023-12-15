@@ -2,18 +2,22 @@
     font-family: 'golos_bold';
     src: url(../fonts/golostext_bold.ttf);
 }
+
 @font-face {
     font-family: 'golos_regular';
     src: url(../fonts/golostext_regular.ttf);
 }
+
 @font-face {
     font-family: 'navigo_bold';
     src: url(../fonts/Navigo-Bold.ttf);
 }
+
 @font-face {
     font-family: 'navigo_regular';
     src: url(../fonts/Navigo-Regular.ttf);
 }
+
 @font-face {
     font-family: 'centurygothic';
     src: url(../fonts/centurygothic.ttf);
@@ -23,6 +27,7 @@ html {
     font-family: 'navigo_regular';
     font-size: 14px;
 }
+
 .container {
     padding-left: 30px;
     padding-right: 30px;
@@ -36,16 +41,19 @@ html {
     padding-top: 10px;
     padding-bottom: 10px;
 }
+
 .header__title {
     font-family: 'golos_regular';
 }
+
 .header__btn_logo {
     padding: 0;
     border: none;
     background-color: transparent;
     cursor: pointer;
 }
-.header_hr_green {
+
+.header__hr_green {
     position: absolute;
     margin: 0px;
     width: 100%;
@@ -53,7 +61,8 @@ html {
     height: 1px;
     border: none;
 }
-.header_hr_red {
+
+.header__hr_red {
     position: absolute;
     margin: 0px;
     width: 50%;
@@ -61,7 +70,8 @@ html {
     height: 1px;
     border: none;
 }
-.header_hr_bold_red {
+
+.header__hr_bold_red {
     position: absolute;
     margin: 0px;
     width: 39%;
@@ -76,11 +86,13 @@ html {
     font-size: 18px;
     margin: 37px 0;
 }
+
 .box {
     display: flex;
     gap: 10px;
     margin-bottom: 56px;
 }
+
 nav ul {
     list-style-type: none;
     padding-left: 0;
@@ -88,6 +100,7 @@ nav ul {
     width: 232px;
     box-shadow: 0px 1px 3px 0px #00000033;
 }
+
 .main__btn_tab {
     border: none;
     background-color: transparent;
@@ -97,31 +110,37 @@ nav ul {
     width: 100%;
     text-align: left;
 }
+
 .main__nav_hr {
     border: none;
     height: 1px;
     background: #EEEEEE;
     margin: 0;
 }
+
 section ul {
     list-style-type: none;
     padding-left: 0;
     margin: 0;
 }
+
 .main__question_title {
     font-size: 14px;
     font-family: 'navigo_bold';
 }
+
 .number {
     font-family: 'centurygothic';;
     color: #E9262D;
     margin-right: 13px;
 }
+
 .points {
     font-family: 'centurygothic';;
     color: #73BE43;
     margin-right: 13px;
 }
+
 .main__questions {
     display: flex;
     flex-direction: column;
@@ -129,6 +148,7 @@ section ul {
     box-shadow: 0px 1px 3px 0px #00000033;
     width: 700px;
 }
+
 .main__btn_continue {
     display: block;
     padding: 14px 45px;
@@ -139,9 +159,11 @@ section ul {
     font-family: 'golos_regular';
     font-size: 16px;
 }
+
 .main__btn_continue:disabled {
     background-color: #1C1A1A15;
 }
+
 .main__btn_continue:enabled {
     background-color: #ffffff;
     cursor: pointer;
@@ -156,6 +178,7 @@ section ul {
     height: 5px;
     border: none;
 }
+
 .footer__red {
     position: absolute;
     margin: 0px;
@@ -169,6 +192,7 @@ button.is-active {
     font-family: 'navigo_bold';
     color: #E9262D;
 }
+
 section.is-active {
     background-color: #EEEEEE;
 }
