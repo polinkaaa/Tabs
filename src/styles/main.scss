@@ -95,6 +95,8 @@ html {
     &__nav {
         width: 36.4%;
         @media (max-width: $mob) {
+            width: -webkit-fit-content;
+            width: -moz-fit-content;
             width: fit-content;
         }
     }
