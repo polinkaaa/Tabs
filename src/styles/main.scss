@@ -1,0 +1,234 @@
+@font-face {
+    font-family: 'golos_bold';
+    src: url(../fonts/golostext_bold.ttf);
+}
+
+@font-face {
+    font-family: 'golos_regular';
+    src: url(../fonts/golostext_regular.ttf);
+}
+
+@font-face {
+    font-family: 'navigo_bold';
+    src: url(../fonts/Navigo-Bold.ttf);
+}
+
+@font-face {
+    font-family: 'navigo_regular';
+    src: url(../fonts/Navigo-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'centurygothic';
+    src: url(../fonts/centurygothic.ttf);
+}
+
+$mob: 400px;
+
+html {
+    font-family: 'navigo_regular';
+    font-size: 14px;
+}
+
+.container {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+/* header */
+.header {
+    &__nav {
+        display: flex;
+        align-items: center;
+        gap: 28px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    &__title {
+        font-family: 'golos_regular';
+    }
+
+    &__btn_logo {
+        padding: 0;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+    }
+
+    &__hr_green {
+        position: absolute;
+        margin: 0px;
+        width: 100%;
+        background: #73BE43;
+        height: 1px;
+        border: none;
+    }
+
+    &__hr_red {
+        position: absolute;
+        margin: 0px;
+        width: 50%;
+        background: #E9262D;
+        height: 1px;
+        border: none;
+    }
+
+    &__hr_bold_red {
+        position: absolute;
+        margin: 0px;
+        width: 39%;
+        background: #E9262D;
+        height: 5px;
+        border: none;
+    }
+}
+
+/* main */
+.main {
+    &__title {
+        font-family: 'golos_bold';
+        font-size: 18px;
+        margin: 37px 0;
+    }
+
+    &__nav {
+        width: 36.4%;
+        @media (max-width: $mob) {
+            width: fit-content;
+        }
+    }
+    
+    &__btn_tab {
+        border: none;
+        background-color: transparent;
+        padding: 10px 10px 8px 10px;
+        font-family: 'navigo_regular';
+        cursor: pointer;
+        width: 100%;
+        text-align: left;
+        @media (max-width: $mob) {
+            border-right: 1px solid #EEEEEE;
+        }
+    }
+
+    li:last-child &__btn_tab {
+        @media (max-width: $mob) {
+            border-right: none;
+        }
+    }
+
+    &__nav_hr {
+        border: none;
+        height: 1px;
+        background: #EEEEEE;
+        margin: 0;
+    }
+
+    &__question_title {
+        font-size: 14px;
+        font-family: 'navigo_bold';
+    }
+
+    &__questions {
+        display: flex;
+        flex-direction: column;
+        padding: 13px 22.5px;
+        box-shadow: 0px 1px 3px 0px #00000033;
+        width: 100%;
+        @media (max-width: $mob) {
+            width: 90%;
+        }
+    }
+
+    &__btn_continue {
+        display: block;
+        padding: 14px 45px;
+        margin: 0 auto 21px;
+        border-radius: 8px;
+        color: #000000;
+        border: 1px solid #00000020;
+        font-family: 'golos_regular';
+        font-size: 16px;
+    }
+    
+    &__btn_continue:disabled {
+        background-color: #1C1A1A15;
+    }
+    
+    &__btn_continue:enabled {
+        background-color: #ffffff;
+        cursor: pointer;
+    }
+}
+
+.box {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 56px;
+    @media (max-width: $mob) {
+        flex-direction: column;
+    }
+}
+
+nav ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+    box-shadow: 0px 1px 3px 0px #00000033;
+    @media (max-width: $mob) {
+        display: flex;
+    }
+}
+
+section ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.number {
+    font-family: 'centurygothic';;
+    color: #E9262D;
+    margin-right: 13px;
+}
+
+.points {
+    font-family: 'centurygothic';;
+    color: #73BE43;
+    margin-right: 13px;
+}
+
+li:last-child p {
+    margin-bottom: 10px;
+}
+
+/* footer */
+.footer {
+    &__green {
+        position: absolute;
+        margin: 0px;
+        width: 100%;
+        background: #73BE43;
+        height: 5px;
+        border: none;
+    }
+
+    &__red {
+        position: absolute;
+        margin: 0px;
+        width: 50%;
+        background: #E9262D;
+        height: 5px;
+        border: none;
+    }
+}
+
+button.is-active {
+    font-family: 'navigo_bold';
+    color: #E9262D;
+}
+
+section.is-active {
+    background-color: #EEEEEE;
+}
