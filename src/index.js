@@ -3,38 +3,29 @@ import './styles/main.scss';
 
 const tabNav = document.querySelectorAll('.main__btn_tab'),
 tabContent = document.querySelectorAll('.tab'),
-btn = document.getElementById('btn');
-let tabName;
+btn = document.querySelector('.main__btn_continue');
 
-tabNav.forEach(item => {
-    item.addEventListener('click', selectTabNav);
-    item.addEventListener('click', checkTabs);
+tabNav.forEach((item, key) => {
+    item.addEventListener('click', () => {
+        checkSelectBtn(key);
+        selectTabContent(key);
+        checkTabs();
+    });
 });
 
-function selectTabNav() {
-    tabNav.forEach(item  => {
-        item.classList.remove('is-active');
-    });
-    this.classList.add('is-active');
-    this.classList.add('checked');
-    tabName = this.getAttribute('data-tab-name');
-    selectTabContent(tabName);
+function checkSelectBtn(key) {
+    tabNav.forEach((btn, index) => {
+        key === index ? btn.classList.add('is-active', 'checked') : btn.classList.remove('is-active');
+    })
 }
 
-function selectTabContent(tabName) {
-    tabContent.forEach(item => {
-        item.classList.contains(tabName) ? item.classList.add('is-active', 'checked') : item.classList.remove('is-active');
+function selectTabContent(key) {
+    tabContent.forEach((item, index) => {
+        key === index ? item.classList.add('is-active', 'checked') : item.classList.remove('is-active');
     });
 }
 
 function checkTabs() {
-    let allTabsClicked = true;
-    tabNav.forEach(tab => {
-        if (!tab.classList.contains('checked')) {
-            allTabsClicked = false;
-        }
-    });
-    if (allTabsClicked) {
-        btn.disabled = false;
-    }
+    const checked = document.querySelectorAll('.main__btn_tab.checked').length;
+    tabNav.length === checked ? btn.disabled = false : '';
 }

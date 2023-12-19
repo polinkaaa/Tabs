@@ -145,8 +145,15 @@ html {
 
     &__btn_continue {
         display: block;
+        position: absolute;
         padding: 14px 45px;
-        margin: 0 auto 21px;
+        width: -webkit-fit-content;
+        width: -moz-fit-content;
+        width: fit-content;
+        margin: auto;
+        left: 0;
+        right: 0;
+        bottom: 90px;
         border-radius: 8px;
         color: #000000;
         border: 1px solid #00000020;
@@ -171,6 +178,10 @@ html {
     @media (max-width: $mob) {
         flex-direction: column;
     }
+}
+
+.tab {
+    display: none;
 }
 
 nav ul {
@@ -214,6 +225,7 @@ li:last-child p {
         background: #73BE43;
         height: 5px;
         border: none;
+        bottom: 0;
     }
 
     &__red {
@@ -223,6 +235,7 @@ li:last-child p {
         background: #E9262D;
         height: 5px;
         border: none;
+        bottom: 0;
     }
 }
 
@@ -232,5 +245,5 @@ button.is-active {
 }
 
 section.is-active {
-    background-color: #EEEEEE;
+    display: block;
 }
